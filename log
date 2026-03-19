@@ -53,3 +53,13 @@ Thu Mar 19 07:26:32 PM UTC 2026:
  tests:  1|4
 total_score: 10/70
 45f6fd6
+Thu Mar 19 07:35:12 PM UTC 2026: 
+ exercises.c | 4 ++++
+ 1 file changed, 4 insertions(+)
+Compilation failed
+In file included from test.c:5:
+exercises.c: In function ‘crea_lista’:
+exercises.c:47:24: error: invalid type argument of unary ‘*’ (have ‘int’)
+   47 |       void* elemento = *i;
+      |                        ^~
+dd7e668
