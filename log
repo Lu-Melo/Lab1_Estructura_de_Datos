@@ -91,3 +91,57 @@ Thu Mar 19 07:55:37 PM UTC 2026:
  tests:  2|3
 total_score: 20/70
 c13ff60
+Compilation failed
+In file included from test.c:5:
+exercises.c: In function ‘sumaLista’:
+exercises.c:60:19: error: initialization of ‘int’ from ‘void *’ makes integer from pointer without a cast [-Wint-conversion]
+   60 |    int elemento = first(L);
+      |                   ^~~~~
+exercises.c:62:19: error: comparison between pointer and integer [-Werror]
+   62 |    while(elemento != NULL) {
+      |                   ^~
+exercises.c:63:22: error: cast to pointer from integer of different size [-Werror=int-to-pointer-cast]
+   63 |       sumatoria += *((int*)elemento);
+      |                      ^
+exercises.c:64:16: error: assignment to ‘int’ from ‘void *’ makes integer from pointer without a cast [-Wint-conversion]
+   64 |       elemento = next(L);
+      |                ^
+cc1: all warnings being treated as errors
+afe2fc5
+Thu Mar 19 11:32:31 PM UTC 2026: 
+Compilation failed
+In file included from test.c:5:
+exercises.c: In function ‘sumaLista’:
+exercises.c:60:19: error: initialization of ‘int’ from ‘void *’ makes integer from pointer without a cast [-Wint-conversion]
+   60 |    int elemento = first(L);
+      |                   ^~~~~
+exercises.c:62:19: error: comparison between pointer and integer [-Werror]
+   62 |    while(elemento != NULL) {
+      |                   ^~
+exercises.c:63:22: error: cast to pointer from integer of different size [-Werror=int-to-pointer-cast]
+   63 |       sumatoria += *((int*)elemento);
+      |                      ^
+exercises.c:64:16: error: assignment to ‘int’ from ‘void *’ makes integer from pointer without a cast [-Wint-conversion]
+   64 |       elemento = next(L);
+      |                ^
+cc1: all warnings being treated as errors
+afe2fc5
+ tests:  2|3
+total_score: 20/70
+afe2fc5
+Thu Mar 19 11:50:45 PM UTC 2026: 
+ exercises.c | 8 +++++++-
+ 1 file changed, 7 insertions(+), 1 deletion(-)
+Compilation failed
+In file included from test.c:5:
+exercises.c: In function ‘eliminaElementos’:
+exercises.c:79:20: error: implicit declaration of function ‘fisrt’; did you mean ‘first’? [-Wimplicit-function-declaration]
+   79 |    int* comparar = fisrt(L);
+      |                    ^~~~~
+      |                    first
+exercises.c:79:20: error: initialization of ‘int *’ from ‘int’ makes pointer from integer without a cast [-Wint-conversion]
+exercises.c:81:19: error: comparison between pointer and integer [-Werror]
+   81 |       if(comparar == elem){
+      |                   ^~
+cc1: all warnings being treated as errors
+afe2fc5
