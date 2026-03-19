@@ -79,3 +79,9 @@ arraylist.h:20:30: note: expected ‘void *’ but argument is of type ‘int’
    20 | void pushBack(List *L, void *dato);
       |                        ~~~~~~^~~~
 f84d1e0
+Thu Mar 19 07:46:51 PM UTC 2026: 
+ exercises.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+ tests:  1|4
+total_score: 10/70
+812422c
