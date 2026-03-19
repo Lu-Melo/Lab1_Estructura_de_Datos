@@ -63,3 +63,19 @@ exercises.c:47:24: error: invalid type argument of unary ‘*’ (have ‘int’
    47 |       void* elemento = *i;
       |                        ^~
 dd7e668
+Thu Mar 19 07:45:59 PM UTC 2026: 
+ exercises.c | 4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+Compilation failed
+In file included from test.c:5:
+exercises.c: In function ‘crea_lista’:
+exercises.c:48:19: error: passing argument 2 of ‘pushBack’ makes pointer from integer without a cast [-Wint-conversion]
+   48 |       pushBack(L, *((int*)elemento));
+      |                   ^~~~~~~~~~~~~~~~~
+      |                   |
+      |                   int
+In file included from exercises.c:6:
+arraylist.h:20:30: note: expected ‘void *’ but argument is of type ‘int’
+   20 | void pushBack(List *L, void *dato);
+      |                        ~~~~~~^~~~
+f84d1e0
