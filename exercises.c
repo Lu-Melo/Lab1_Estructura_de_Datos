@@ -52,6 +52,10 @@ Crea una función que reciba una lista de enteros (int*) y
 retorne la suma de sus elementos.
 */
 int sumaLista(List *L) {
+   void* elemento = first(List *L);
+   while(elemento != NULL) {
+      printf("%d \n", *((int*)elemento));
+   }
    return 0;
 }
 
