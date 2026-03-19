@@ -28,3 +28,16 @@ exercises.c:58:23: error: invalid use of incomplete typedef ‘List’
    58 |       elemento = next(*L);
       |                       ^~
 4eeba76
+Thu Mar 19 07:24:52 PM UTC 2026: 
+ exercises.c | 4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+Compilation failed
+In file included from test.c:5:
+exercises.c: In function ‘sumaLista’:
+exercises.c:55:27: error: expected expression before ‘List’
+   55 |    void* elemento = first(List *L);
+      |                           ^~~~
+exercises.c:58:23: error: expected expression before ‘List’
+   58 |       elemento = next(List *L);
+      |                       ^~~~
+7303286
