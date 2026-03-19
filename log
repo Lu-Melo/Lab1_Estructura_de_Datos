@@ -41,3 +41,9 @@ exercises.c:58:23: error: expected expression before ‘List’
    58 |       elemento = next(List *L);
       |                       ^~~~
 7303286
+Thu Mar 19 07:25:12 PM UTC 2026: 
+ exercises.c | 4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+ tests:  0|5
+total_score: 0/70
+df26b1c
