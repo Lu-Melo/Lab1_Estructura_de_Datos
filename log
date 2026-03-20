@@ -389,3 +389,23 @@ exercises.c:132:10: note: ‘elemento’ was declared here
       |          ^~~~~~~~
 cc1: all warnings being treated as errors
 e81f990
+Fri Mar 20 11:25:20 PM UTC 2026: 
+ exercises.c | 12 ++++++------
+ 1 file changed, 6 insertions(+), 6 deletions(-)
+Compilation failed
+In file included from test.c:5:
+exercises.c: In function ‘parentesisBalanceados’:
+exercises.c:135:19: error: comparison between pointer and zero character constant [-Werror=pointer-compare]
+  135 |    while(elemento != '\0') {
+      |                   ^~
+exercises.c:135:10: note: did you mean to dereference the pointer?
+  135 |    while(elemento != '\0') {
+      |          ^
+exercises.c:135:19: error: ‘elemento’ is used uninitialized [-Werror=uninitialized]
+  135 |    while(elemento != '\0') {
+      |          ~~~~~~~~~^~~~~~~
+exercises.c:132:10: note: ‘elemento’ was declared here
+  132 |    char *elemento;
+      |          ^~~~~~~~
+cc1: all warnings being treated as errors
+537ec02
