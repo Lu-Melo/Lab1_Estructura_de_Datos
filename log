@@ -239,3 +239,87 @@ exercises.c:129:15: error: assignment to ‘char’ from ‘void *’ makes inte
       |               ^
 cc1: all warnings being treated as errors
 dea8f30
+Fri Mar 20 12:30:51 AM UTC 2026: 
+ exercises.c | 29 +++++++++++++++++++----------
+ 1 file changed, 19 insertions(+), 10 deletions(-)
+Compilation failed
+In file included from test.c:5:
+exercises.c: In function ‘parentesisBalanceados’:
+exercises.c:126:38: error: passing argument 2 of ‘push’ makes pointer from integer without a cast [-Wint-conversion]
+  126 |       if(elemento == '(') push(Paux, elemento);
+      |                                      ^~~~~~~~
+      |                                      |
+      |                                      char
+In file included from exercises.c:7:
+stack.h:11:31: note: expected ‘void *’ but argument is of type ‘char’
+   11 | void push(Stack *stack, void *data) { pushFront(stack, data); }
+      |                         ~~~~~~^~~~
+exercises.c:127:38: error: passing argument 2 of ‘push’ makes pointer from integer without a cast [-Wint-conversion]
+  127 |       if(elemento == '{') push(Paux, elemento);
+      |                                      ^~~~~~~~
+      |                                      |
+      |                                      char
+stack.h:11:31: note: expected ‘void *’ but argument is of type ‘char’
+   11 | void push(Stack *stack, void *data) { pushFront(stack, data); }
+      |                         ~~~~~~^~~~
+exercises.c:128:38: error: passing argument 2 of ‘push’ makes pointer from integer without a cast [-Wint-conversion]
+  128 |       if(elemento == '[') push(Paux, elemento);
+      |                                      ^~~~~~~~
+      |                                      |
+      |                                      char
+stack.h:11:31: note: expected ‘void *’ but argument is of type ‘char’
+   11 | void push(Stack *stack, void *data) { pushFront(stack, data); }
+      |                         ~~~~~~^~~~
+exercises.c:131:23: error: comparison between pointer and zero character constant [-Werror=pointer-compare]
+  131 |          if(top(Paux) != '\0'){
+      |                       ^~
+exercises.c:131:13: note: did you mean to dereference the pointer?
+  131 |          if(top(Paux) != '\0'){
+      |             ^
+exercises.c:132:26: error: comparison between pointer and integer [-Werror]
+  132 |             if(top(Paux) == '(') {
+      |                          ^~
+exercises.c:133:25: error: expected ‘;’ before ‘}’ token
+  133 |                pop(Paux)
+      |                         ^
+      |                         ;
+  134 |             }
+      |             ~            
+exercises.c:143:23: error: comparison between pointer and zero character constant [-Werror=pointer-compare]
+  143 |          if(top(Paux) != '\0'){
+      |                       ^~
+exercises.c:143:13: note: did you mean to dereference the pointer?
+  143 |          if(top(Paux) != '\0'){
+      |             ^
+exercises.c:144:26: error: comparison between pointer and integer [-Werror]
+  144 |             if(top(Paux) == '{') {
+      |                          ^~
+exercises.c:145:25: error: expected ‘;’ before ‘}’ token
+  145 |                pop(Paux)
+      |                         ^
+      |                         ;
+  146 |             }
+      |             ~            
+exercises.c:156:23: error: comparison between pointer and zero character constant [-Werror=pointer-compare]
+  156 |          if(top(Paux) != '\0'){
+      |                       ^~
+exercises.c:156:13: note: did you mean to dereference the pointer?
+  156 |          if(top(Paux) != '\0'){
+      |             ^
+exercises.c:157:26: error: comparison between pointer and integer [-Werror]
+  157 |             if(top(Paux) == '[') {
+      |                          ^~
+exercises.c:158:25: error: expected ‘;’ before ‘}’ token
+  158 |                pop(Paux)
+      |                         ^
+      |                         ;
+  159 |             }
+      |             ~            
+exercises.c:172:17: error: comparison between pointer and zero character constant [-Werror=pointer-compare]
+  172 |    if(top(Paux) == '\0') return 1;
+      |                 ^~
+exercises.c:172:7: note: did you mean to dereference the pointer?
+  172 |    if(top(Paux) == '\0') return 1;
+      |       ^
+cc1: all warnings being treated as errors
+4cebb17
