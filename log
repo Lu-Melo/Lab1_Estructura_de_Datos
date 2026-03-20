@@ -385,3 +385,87 @@ exercises.c:158:25: error: expected ‘;’ before ‘}’ token
       |             ~            
 cc1: all warnings being treated as errors
 6e24e62
+Fri Mar 20 12:47:32 AM UTC 2026: 
+ exercises.c | 12 +++++++-----
+ 1 file changed, 7 insertions(+), 5 deletions(-)
+Compilation failed
+In file included from test.c:5:
+exercises.c: In function ‘parentesisBalanceados’:
+exercises.c:127:19: error: comparison between pointer and zero character constant [-Werror=pointer-compare]
+  127 |    while(elemento != '\0'){
+      |                   ^~
+exercises.c:127:10: note: did you mean to dereference the pointer?
+  127 |    while(elemento != '\0'){
+      |          ^
+exercises.c:128:19: error: comparison between pointer and integer [-Werror]
+  128 |       if(elemento == '(') push(Paux, *elemento);
+      |                   ^~
+exercises.c:128:38: error: passing argument 2 of ‘push’ makes pointer from integer without a cast [-Wint-conversion]
+  128 |       if(elemento == '(') push(Paux, *elemento);
+      |                                      ^~~~~~~~~
+      |                                      |
+      |                                      char
+In file included from exercises.c:7:
+stack.h:11:31: note: expected ‘void *’ but argument is of type ‘char’
+   11 | void push(Stack *stack, void *data) { pushFront(stack, data); }
+      |                         ~~~~~~^~~~
+exercises.c:129:19: error: comparison between pointer and integer [-Werror]
+  129 |       if(elemento == '{') push(Paux, *elemento);
+      |                   ^~
+exercises.c:129:38: error: passing argument 2 of ‘push’ makes pointer from integer without a cast [-Wint-conversion]
+  129 |       if(elemento == '{') push(Paux, *elemento);
+      |                                      ^~~~~~~~~
+      |                                      |
+      |                                      char
+stack.h:11:31: note: expected ‘void *’ but argument is of type ‘char’
+   11 | void push(Stack *stack, void *data) { pushFront(stack, data); }
+      |                         ~~~~~~^~~~
+exercises.c:130:19: error: comparison between pointer and integer [-Werror]
+  130 |       if(elemento == '[') push(Paux, *elemento);
+      |                   ^~
+exercises.c:130:38: error: passing argument 2 of ‘push’ makes pointer from integer without a cast [-Wint-conversion]
+  130 |       if(elemento == '[') push(Paux, *elemento);
+      |                                      ^~~~~~~~~
+      |                                      |
+      |                                      char
+stack.h:11:31: note: expected ‘void *’ but argument is of type ‘char’
+   11 | void push(Stack *stack, void *data) { pushFront(stack, data); }
+      |                         ~~~~~~^~~~
+exercises.c:132:19: error: comparison between pointer and integer [-Werror]
+  132 |       if(elemento == ')'){
+      |                   ^~
+exercises.c:134:16: error: cast from pointer to integer of different size [-Werror=pointer-to-int-cast]
+  134 |             if((char)top(Paux) == '(') {
+      |                ^
+exercises.c:135:25: error: expected ‘;’ before ‘}’ token
+  135 |                pop(Paux)
+      |                         ^
+      |                         ;
+  136 |             }
+      |             ~            
+exercises.c:144:19: error: comparison between pointer and integer [-Werror]
+  144 |       if(elemento == '}'){
+      |                   ^~
+exercises.c:146:16: error: cast from pointer to integer of different size [-Werror=pointer-to-int-cast]
+  146 |             if((char)top(Paux) == '{') {
+      |                ^
+exercises.c:147:25: error: expected ‘;’ before ‘}’ token
+  147 |                pop(Paux)
+      |                         ^
+      |                         ;
+  148 |             }
+      |             ~            
+exercises.c:157:19: error: comparison between pointer and integer [-Werror]
+  157 |       if(elemento == ']'){
+      |                   ^~
+exercises.c:159:16: error: cast from pointer to integer of different size [-Werror=pointer-to-int-cast]
+  159 |             if((char)top(Paux) == '[') {
+      |                ^
+exercises.c:160:25: error: expected ‘;’ before ‘}’ token
+  160 |                pop(Paux)
+      |                         ^
+      |                         ;
+  161 |             }
+      |             ~            
+cc1: all warnings being treated as errors
+278f12a
