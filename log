@@ -117,3 +117,13 @@ stack.h:11:31: note: expected ‘void *’ but argument is of type ‘char’
    11 | void push(Stack *stack, void *data) { pushFront(stack, data); }
       |                         ~~~~~~^~~~
 7811094
+Fri Mar 20 10:52:45 PM UTC 2026: 
+ exercises.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+Compilation failed
+In file included from test.c:5:
+exercises.c: In function ‘parentesisBalanceados’:
+exercises.c:134:38: error: invalid type argument of unary ‘*’ (have ‘int’)
+  134 |       if(elemento == '(') push(Paux, *elemento);
+      |                                      ^~~~~~~~~
+4b1e530
