@@ -72,3 +72,9 @@ exercises.c:46:15: error: expected expression before ‘int’
    46 |    elemento = int* malloc(1 * sizeof(int));
       |               ^~~
 cc91d63
+Fri Mar 20 10:34:19 PM UTC 2026: 
+ exercises.c | 5 ++++-
+ 1 file changed, 4 insertions(+), 1 deletion(-)
+ tests:  2|3
+total_score: 20/70
+221c0ed
