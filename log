@@ -1,0 +1,13 @@
+Fri Mar 20 10:14:55 PM UTC 2026: 
+ exercises.c | 10 +++++++++-
+ 1 file changed, 9 insertions(+), 1 deletion(-)
+Compilation failed
+In file included from test.c:5:
+exercises.c: In function ‘sumaLista’:
+exercises.c:59:17: error: assignment to ‘int’ from ‘int *’ makes integer from pointer without a cast [-Wint-conversion]
+   59 |       sumatoria += elemento;
+      |                 ^~
+exercises.c:60:17: error: assignment to ‘int’ from ‘void *’ makes integer from pointer without a cast [-Wint-conversion]
+   60 |       *elemento = next(L);
+      |                 ^
+44d58c2
