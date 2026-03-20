@@ -127,3 +127,9 @@ exercises.c:134:38: error: invalid type argument of unary ‘*’ (have ‘int�
   134 |       if(elemento == '(') push(Paux, *elemento);
       |                                      ^~~~~~~~~
 4b1e530
+Fri Mar 20 10:53:05 PM UTC 2026: 
+ exercises.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+ tests:  4|1
+total_score: 50/70
+39f18a0
