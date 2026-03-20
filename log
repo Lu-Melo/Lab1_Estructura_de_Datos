@@ -287,3 +287,17 @@ exercises.c:137:23: error: comparison between pointer and integer [-Werror]
       |                       ^~
 cc1: all warnings being treated as errors
 3ab1666
+Fri Mar 20 11:13:19 PM UTC 2026: 
+ exercises.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+Compilation failed
+In file included from test.c:5:
+exercises.c: In function ‘parentesisBalanceados’:
+exercises.c:137:26: error: multi-character character constant [-Werror=multichar]
+  137 |          if(top(Paux) != 'NULL') {
+      |                          ^~~~~~
+exercises.c:137:23: error: comparison between pointer and integer [-Werror]
+  137 |          if(top(Paux) != 'NULL') {
+      |                       ^~
+cc1: all warnings being treated as errors
+6f16b2a
