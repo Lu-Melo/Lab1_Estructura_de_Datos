@@ -323,3 +323,65 @@ exercises.c:172:7: note: did you mean to dereference the pointer?
       |       ^
 cc1: all warnings being treated as errors
 4cebb17
+Fri Mar 20 12:33:42 AM UTC 2026: 
+ exercises.c | 8 ++++----
+ 1 file changed, 4 insertions(+), 4 deletions(-)
+Compilation failed
+In file included from test.c:5:
+exercises.c: In function ‘parentesisBalanceados’:
+exercises.c:126:38: error: cast to pointer from integer of different size [-Werror=int-to-pointer-cast]
+  126 |       if(elemento == '(') push(Paux, (void*)elemento);
+      |                                      ^
+exercises.c:127:38: error: cast to pointer from integer of different size [-Werror=int-to-pointer-cast]
+  127 |       if(elemento == '{') push(Paux, (void*)elemento);
+      |                                      ^
+exercises.c:128:38: error: cast to pointer from integer of different size [-Werror=int-to-pointer-cast]
+  128 |       if(elemento == '[') push(Paux, (void*)elemento);
+      |                                      ^
+exercises.c:131:23: error: comparison between pointer and zero character constant [-Werror=pointer-compare]
+  131 |          if(top(Paux) != '\0'){
+      |                       ^~
+exercises.c:131:13: note: did you mean to dereference the pointer?
+  131 |          if(top(Paux) != '\0'){
+      |             ^
+exercises.c:132:16: error: cast from pointer to integer of different size [-Werror=pointer-to-int-cast]
+  132 |             if((char)top(Paux) == '(') {
+      |                ^
+exercises.c:133:25: error: expected ‘;’ before ‘}’ token
+  133 |                pop(Paux)
+      |                         ^
+      |                         ;
+  134 |             }
+      |             ~            
+exercises.c:143:23: error: comparison between pointer and zero character constant [-Werror=pointer-compare]
+  143 |          if(top(Paux) != '\0'){
+      |                       ^~
+exercises.c:143:13: note: did you mean to dereference the pointer?
+  143 |          if(top(Paux) != '\0'){
+      |             ^
+exercises.c:144:16: error: cast from pointer to integer of different size [-Werror=pointer-to-int-cast]
+  144 |             if((char)top(Paux) == '{') {
+      |                ^
+exercises.c:145:25: error: expected ‘;’ before ‘}’ token
+  145 |                pop(Paux)
+      |                         ^
+      |                         ;
+  146 |             }
+      |             ~            
+exercises.c:156:23: error: comparison between pointer and zero character constant [-Werror=pointer-compare]
+  156 |          if(top(Paux) != '\0'){
+      |                       ^~
+exercises.c:156:13: note: did you mean to dereference the pointer?
+  156 |          if(top(Paux) != '\0'){
+      |             ^
+exercises.c:157:16: error: cast from pointer to integer of different size [-Werror=pointer-to-int-cast]
+  157 |             if((char)top(Paux) == '[') {
+      |                ^
+exercises.c:158:25: error: expected ‘;’ before ‘}’ token
+  158 |                pop(Paux)
+      |                         ^
+      |                         ;
+  159 |             }
+      |             ~            
+cc1: all warnings being treated as errors
+6e24e62

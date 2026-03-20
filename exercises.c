@@ -129,7 +129,7 @@ int parentesisBalanceados(char *cadena) {
 
       if(elemento == ')'){
          if(top(Paux) != '\0'){
-            if((char*)top(Paux) == '(') {
+            if((char)top(Paux) == '(') {
                pop(Paux)
             } 
             else {
@@ -141,7 +141,7 @@ int parentesisBalanceados(char *cadena) {
       }
       if(elemento == '}'){
          if(top(Paux) != '\0'){
-            if((char*)top(Paux) == '{') {
+            if((char)top(Paux) == '{') {
                pop(Paux)
             } 
             else {
@@ -154,7 +154,7 @@ int parentesisBalanceados(char *cadena) {
       }
       if(elemento == ']'){
          if(top(Paux) != '\0'){
-            if((char*)top(Paux) == '[') {
+            if((char)top(Paux) == '[') {
                pop(Paux)
             } 
             else {
@@ -169,7 +169,7 @@ int parentesisBalanceados(char *cadena) {
       elemento = cadena[i];
    }
 
-   if(top(Paux) == '\0') return 1;
+   if(top(Paux) == NULL) return 1;
    
    return 0;
 }
