@@ -43,11 +43,6 @@ Al finalizar retorna la lista creada.
 
 List* crea_lista() {
    List* L = create_list();
-   for(int i = 1; i <= 10; i++) {
-      int* elemento = (int*) malloc(1 * sizeof(int));
-      *elemento = i;
-      pushBack(L, elemento);
-   }
    return L;
 }
 
@@ -57,13 +52,7 @@ Crea una función que reciba una lista de enteros (int*) y
 retorne la suma de sus elementos.
 */
 int sumaLista(List *L) {
-   int* elemento = first(L);
-   int sumatoria = 0;
-   while(elemento != NULL) {
-      sumatoria += *((int*)elemento);
-      elemento = next(L);
-   }
-   return sumatoria;
+   return 0;
 }
 
 /*
@@ -76,13 +65,7 @@ posiciona en el elemento anterior.
 */
 
 void eliminaElementos(List*L, int elem){
-   int* comparar = first(L);
-   while(comparar != NULL) {
-      if(*comparar == elem){
-         popCurrent(L);
-      }
-      comparar = next(L);
-   }
+
 }
 
 /*
@@ -93,21 +76,6 @@ Puedes usar una pila auxiliar.
 */
 
 void copia_pila(Stack* P1, Stack* P2) {
-   Stack* Paux = create_stack();
-   
-   void* elemento = top(P1);
-   while(elemento != NULL){
-      push(Paux, elemento);
-      pop(P1);
-      elemento = top(P1);
-   }
-   elemento = top(Paux);
-   while(elemento != NULL){
-      push(P2, elemento);
-      push(P1, elemento);
-      pop(Paux);
-      elemento = top(Paux);
-   }
 }
 
 /*
@@ -118,62 +86,6 @@ paraéntesis balanceados. Retorna 1 si están balanceados,
 */
 
 int parentesisBalanceados(char *cadena) {
-   Stack* Paux = create_stack();
-   int i = 0;
-   
-   char* elemento = (char*) malloc(1 * sizeof(char));
-   *elemento = cadena[0];
-   
-   while(*elemento != '\0'){
-      if(*elemento == '(') push(Paux, elemento);
-      if(*elemento == '{') push(Paux, elemento);
-      if(*elemento == '[') push(Paux, elemento);
-
-      if(*elemento == ')'){
-         if(top(Paux) != NULL) {
-            if( *((char*)top(Paux) ) == '(') {
-               pop(Paux);
-            } 
-            else {
-               return 0;
-            }
-         } else {
-            return 0;
-         }
-      }
-      if(*elemento == '}'){
-         if(top(Paux) != NULL) {
-            if( *((char*)top(Paux) ) == '{') {
-               pop(Paux);
-            } 
-            else {
-               return 0;
-            }
-         }
-         else {
-            return 0;
-         }
-      }
-      if(*elemento == ']'){
-         if(top(Paux) != NULL) {
-            if( *((char*)top(Paux) ) == '[') {
-               pop(Paux);
-            } 
-            else {
-               return 0;
-            }
-         } else {
-            return 0;
-         }
-      }
-
-      i++;
-      elemento = (char*) malloc(1 * sizeof(char));
-      *elemento = cadena[i];
-   }
-
-   if(top(Paux) == NULL) return 1;
-   
    return 0;
 }
 
