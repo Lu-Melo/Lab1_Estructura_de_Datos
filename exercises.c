@@ -142,8 +142,8 @@ int parentesisBalanceados(char *cadena) {
          }
       }
       if(*elemento == '}'){
-         if( *((char*)top(Paux) ) != NULL){
-            if((char)top(Paux) == '{') {
+         if(top(Paux) != NULL){
+            if( *((char*)top(Paux) ) == '{') {
                pop(Paux)
             } 
             else {
@@ -155,8 +155,8 @@ int parentesisBalanceados(char *cadena) {
          }
       }
       if(*elemento == ']'){
-         if( *((char*)top(Paux) ){
-            if((char)top(Paux) == '[') {
+         if(top(Paux) != NULL) ){
+            if( *((char*)top(Paux) ) == '[') {
                pop(Paux)
             } 
             else {
@@ -168,7 +168,7 @@ int parentesisBalanceados(char *cadena) {
       }
 
       i++;
-      char* elemento = (char*) malloc(1 * sizeof(char));
+      elemento = (char*) malloc(1 * sizeof(char));
       *elemento = cadena[i];
    }
 

@@ -502,3 +502,55 @@ exercises.c:168:7: error: expected expression before ‘}’ token
       |       ^
 cc1: all warnings being treated as errors
 de816b3
+Fri Mar 20 12:58:38 AM UTC 2026: 
+ exercises.c | 10 +++++-----
+ 1 file changed, 5 insertions(+), 5 deletions(-)
+Compilation failed
+In file included from test.c:5:
+exercises.c: In function ‘parentesisBalanceados’:
+exercises.c:135:25: error: expected ‘;’ before ‘}’ token
+  135 |                pop(Paux)
+      |                         ^
+      |                         ;
+  136 |             }
+      |             ~            
+exercises.c:147:25: error: expected ‘;’ before ‘}’ token
+  147 |                pop(Paux)
+      |                         ^
+      |                         ;
+  148 |             }
+      |             ~            
+exercises.c:158:32: error: expected statement before ‘)’ token
+  158 |          if(top(Paux) != NULL) ){
+      |                                ^
+exercises.c:158:10: error: this ‘if’ clause does not guard... [-Werror=misleading-indentation]
+  158 |          if(top(Paux) != NULL) ){
+      |          ^~
+exercises.c:158:33: note: ...this statement, but the latter is misleadingly indented as if it were guarded by the ‘if’
+  158 |          if(top(Paux) != NULL) ){
+      |                                 ^
+exercises.c:160:25: error: expected ‘;’ before ‘}’ token
+  160 |                pop(Paux)
+      |                         ^
+      |                         ;
+  161 |             }
+      |             ~            
+exercises.c:165:12: error: expected ‘}’ before ‘else’
+  165 |          } else {
+      |            ^~~~
+exercises.c: At top level:
+exercises.c:175:4: error: expected identifier or ‘(’ before ‘if’
+  175 |    if(top(Paux) == NULL) return 1;
+      |    ^~
+exercises.c:177:4: error: expected identifier or ‘(’ before ‘return’
+  177 |    return 0;
+      |    ^~~~~~
+exercises.c:178:1: error: expected identifier or ‘(’ before ‘}’ token
+  178 | }
+      | ^
+exercises.c: In function ‘parentesisBalanceados’:
+exercises.c:173:4: error: control reaches end of non-void function [-Werror=return-type]
+  173 |    }
+      |    ^
+cc1: all warnings being treated as errors
+b6cf329
