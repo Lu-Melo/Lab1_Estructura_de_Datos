@@ -130,13 +130,12 @@ int parentesisBalanceados(char *cadena) {
    Stack *Paux = create_stack();
    int cont = 0;
    char *elemento;
-   
+
+   elemento = (char*) malloc(1 * sizeof(char));
+   if(elemento == NULL) exit(EXIT_FAILURE);
+   *elemento = cadena[cont];
    
    while(elemento != '\0') {
-      
-      elemento = (char*) malloc(1 * sizeof(char));
-      if(elemento == NULL) exit(EXIT_FAILURE);
-      *elemento = cadena[cont];
       
       if(*elemento == '(') push(Paux, elemento);
       if(*elemento == '{') push(Paux, elemento);
@@ -183,6 +182,9 @@ int parentesisBalanceados(char *cadena) {
       }
       
       cont++;
+      elemento = (char*) malloc(1 * sizeof(char));
+      if(elemento == NULL) exit(EXIT_FAILURE);
+      *elemento = cadena[cont];
    }
 
    if(top(Paux) == NULL) return 1;
