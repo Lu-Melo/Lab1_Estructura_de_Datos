@@ -180,3 +180,62 @@ Fri Mar 20 12:04:31 AM UTC 2026:
  tests:  4|1
 total_score: 50/70
 cb03aa4
+Fri Mar 20 12:12:56 AM UTC 2026: 
+ exercises.c | 11 +++++++++++
+ 1 file changed, 11 insertions(+)
+Compilation failed
+In file included from test.c:5:
+exercises.c: In function ‘parentesisBalanceados’:
+exercises.c:121:25: error: passing argument 1 of ‘first’ from incompatible pointer type [-Wincompatible-pointer-types]
+  121 |    char abierto = first(cadena);
+      |                         ^~~~~~
+      |                         |
+      |                         char *
+In file included from exercises.c:6:
+arraylist.h:10:19: note: expected ‘List *’ but argument is of type ‘char *’
+   10 | void* first(List *L);
+      |             ~~~~~~^
+exercises.c:121:19: error: initialization of ‘char’ from ‘void *’ makes integer from pointer without a cast [-Wint-conversion]
+  121 |    char abierto = first(cadena);
+      |                   ^~~~~
+exercises.c:124:18: error: comparison between pointer and integer [-Werror]
+  124 |    while(abierto != NULL){
+      |                  ^~
+exercises.c:125:37: error: passing argument 2 of ‘push’ makes pointer from integer without a cast [-Wint-conversion]
+  125 |       if(abierto == '(') push(Paux, abierto);
+      |                                     ^~~~~~~
+      |                                     |
+      |                                     char
+In file included from exercises.c:7:
+stack.h:11:31: note: expected ‘void *’ but argument is of type ‘char’
+   11 | void push(Stack *stack, void *data) { pushFront(stack, data); }
+      |                         ~~~~~~^~~~
+exercises.c:126:37: error: passing argument 2 of ‘push’ makes pointer from integer without a cast [-Wint-conversion]
+  126 |       if(abierto == '{') push(Paux, abierto);
+      |                                     ^~~~~~~
+      |                                     |
+      |                                     char
+stack.h:11:31: note: expected ‘void *’ but argument is of type ‘char’
+   11 | void push(Stack *stack, void *data) { pushFront(stack, data); }
+      |                         ~~~~~~^~~~
+exercises.c:127:37: error: passing argument 2 of ‘push’ makes pointer from integer without a cast [-Wint-conversion]
+  127 |       if(abierto == '[') push(Paux, abierto);
+      |                                     ^~~~~~~
+      |                                     |
+      |                                     char
+stack.h:11:31: note: expected ‘void *’ but argument is of type ‘char’
+   11 | void push(Stack *stack, void *data) { pushFront(stack, data); }
+      |                         ~~~~~~^~~~
+exercises.c:129:22: error: passing argument 1 of ‘next’ from incompatible pointer type [-Wincompatible-pointer-types]
+  129 |       abierto = next(cadena);
+      |                      ^~~~~~
+      |                      |
+      |                      char *
+arraylist.h:14:18: note: expected ‘List *’ but argument is of type ‘char *’
+   14 | void* next(List *L);
+      |            ~~~~~~^
+exercises.c:129:15: error: assignment to ‘char’ from ‘void *’ makes integer from pointer without a cast [-Wint-conversion]
+  129 |       abierto = next(cadena);
+      |               ^
+cc1: all warnings being treated as errors
+dea8f30
