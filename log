@@ -41,3 +41,14 @@ exercises.c:61:16: error: assignment to ‘int’ from ‘void *’ makes intege
       |                ^
 cc1: all warnings being treated as errors
 1604b67
+Fri Mar 20 10:17:14 PM UTC 2026: 
+ exercises.c | 3 +--
+ 1 file changed, 1 insertion(+), 2 deletions(-)
+Compilation failed
+In file included from test.c:5:
+exercises.c: In function ‘sumaLista’:
+exercises.c:56:11: error: ‘elemento’ undeclared (first use in this function)
+   56 |    (int*) elemento = first(L);
+      |           ^~~~~~~~
+exercises.c:56:11: note: each undeclared identifier is reported only once for each function it appears in
+2d6b37d
