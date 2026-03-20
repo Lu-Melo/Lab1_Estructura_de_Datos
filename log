@@ -325,3 +325,29 @@ Fri Mar 20 11:15:49 PM UTC 2026:
  tests:  4|1
 total_score: 50/70
 af8ee08
+Fri Mar 20 11:17:16 PM UTC 2026: 
+ exercises.c | 6 +++---
+ 1 file changed, 3 insertions(+), 3 deletions(-)
+Compilation failed
+In file included from test.c:5:
+exercises.c: In function ‘parentesisBalanceados’:
+exercises.c:140:19: error: cast from pointer to integer of different size [-Werror=pointer-to-int-cast]
+  140 |             if( *((char)top(Paux)) == '(') {
+      |                   ^
+exercises.c:140:17: error: invalid type argument of unary ‘*’ (have ‘int’)
+  140 |             if( *((char)top(Paux)) == '(') {
+      |                 ^~~~~~~~~~~~~~~~~~
+exercises.c:153:19: error: cast from pointer to integer of different size [-Werror=pointer-to-int-cast]
+  153 |             if( *((char)top(Paux)) == '(') {
+      |                   ^
+exercises.c:153:17: error: invalid type argument of unary ‘*’ (have ‘int’)
+  153 |             if( *((char)top(Paux)) == '(') {
+      |                 ^~~~~~~~~~~~~~~~~~
+exercises.c:166:19: error: cast from pointer to integer of different size [-Werror=pointer-to-int-cast]
+  166 |             if( *((char)top(Paux)) == '(') {
+      |                   ^
+exercises.c:166:17: error: invalid type argument of unary ‘*’ (have ‘int’)
+  166 |             if( *((char)top(Paux)) == '(') {
+      |                 ^~~~~~~~~~~~~~~~~~
+cc1: all warnings being treated as errors
+a9d6891
