@@ -230,3 +230,23 @@ exercises.c:138:26: error: comparison between pointer and integer [-Werror]
       |                          ^~
 cc1: all warnings being treated as errors
 31faa7a
+Fri Mar 20 11:03:07 PM UTC 2026: 
+ exercises.c | 4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+Compilation failed
+In file included from test.c:5:
+exercises.c: In function ‘parentesisBalanceados’:
+exercises.c:134:38: error: cast to pointer from integer of different size [-Werror=int-to-pointer-cast]
+  134 |       if(elemento == '(') push(Paux, (void*)elemento);
+      |                                      ^
+exercises.c:137:23: error: comparison between pointer and zero character constant [-Werror=pointer-compare]
+  137 |          if(top(Paux) != '\0') {
+      |                       ^~
+exercises.c:137:13: note: did you mean to dereference the pointer?
+  137 |          if(top(Paux) != '\0') {
+      |             ^
+exercises.c:138:16: error: cast from pointer to integer of different size [-Werror=pointer-to-int-cast]
+  138 |             if((char)top(Paux) == '(') {
+      |                ^
+cc1: all warnings being treated as errors
+ed34204
