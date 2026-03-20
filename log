@@ -250,3 +250,23 @@ exercises.c:138:16: error: cast from pointer to integer of different size [-Werr
       |                ^
 cc1: all warnings being treated as errors
 ed34204
+Fri Mar 20 11:05:59 PM UTC 2026: 
+ exercises.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+Compilation failed
+In file included from test.c:5:
+exercises.c: In function ‘parentesisBalanceados’:
+exercises.c:134:38: error: cast to pointer from integer of different size [-Werror=int-to-pointer-cast]
+  134 |       if(elemento == '(') push(Paux, (void*)elemento);
+      |                                      ^
+exercises.c:137:26: error: multi-character character constant [-Werror=multichar]
+  137 |          if(top(Paux) != 'NULL') {
+      |                          ^~~~~~
+exercises.c:137:23: error: comparison between pointer and integer [-Werror]
+  137 |          if(top(Paux) != 'NULL') {
+      |                       ^~
+exercises.c:138:16: error: cast from pointer to integer of different size [-Werror=pointer-to-int-cast]
+  138 |             if((char)top(Paux) == '(') {
+      |                ^
+cc1: all warnings being treated as errors
+57dc318

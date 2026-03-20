@@ -134,7 +134,7 @@ int parentesisBalanceados(char *cadena) {
       if(elemento == '(') push(Paux, (void*)elemento);
 
       if(elemento == ')') {
-         if(top(Paux) != '\0') {
+         if(top(Paux) != 'NULL') {
             if((char)top(Paux) == '(') {
                pop(Paux);
             }
