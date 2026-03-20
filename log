@@ -133,3 +133,20 @@ Fri Mar 20 10:53:05 PM UTC 2026:
  tests:  4|1
 total_score: 50/70
 39f18a0
+Fri Mar 20 10:59:18 PM UTC 2026: 
+ exercises.c | 14 ++++++++++++++
+ 1 file changed, 14 insertions(+)
+Compilation failed
+In file included from test.c:5:
+exercises.c: In function ‘parentesisBalanceados’:
+exercises.c:137:23: error: comparison between pointer and zero character constant [-Werror=pointer-compare]
+  137 |          if(top(Paux) != '\0') {
+      |                       ^~
+exercises.c:137:13: note: did you mean to dereference the pointer?
+  137 |          if(top(Paux) != '\0') {
+      |             ^
+exercises.c:138:26: error: comparison between pointer and integer [-Werror]
+  138 |             if(top(Paux) == '(') {
+      |                          ^~
+cc1: all warnings being treated as errors
+890c6b4

@@ -133,6 +133,20 @@ int parentesisBalanceados(char *cadena) {
    while(elemento != '\0') {
       if(elemento == '(') push(Paux, &elemento);
 
+      if(elemento == ')') {
+         if(top(Paux) != '\0') {
+            if(top(Paux) == '(') {
+               pop(Paux);
+            }
+            else {
+               return 0;
+            }
+         }
+         else {
+            return 0;
+         }
+      }
+      
       cont++;
       elemento = cadena[cont];
    }
