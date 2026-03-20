@@ -351,3 +351,41 @@ exercises.c:166:17: error: invalid type argument of unary ‘*’ (have ‘int�
       |                 ^~~~~~~~~~~~~~~~~~
 cc1: all warnings being treated as errors
 a9d6891
+Fri Mar 20 11:24:02 PM UTC 2026: 
+ exercises.c | 22 ++++++++++++++--------
+ 1 file changed, 14 insertions(+), 8 deletions(-)
+Compilation failed
+In file included from test.c:5:
+exercises.c: In function ‘parentesisBalanceados’:
+exercises.c:135:19: error: comparison between pointer and zero character constant [-Werror=pointer-compare]
+  135 |    while(elemento != '\0') {
+      |                   ^~
+exercises.c:135:10: note: did you mean to dereference the pointer?
+  135 |    while(elemento != '\0') {
+      |          ^
+exercises.c:141:19: error: comparison between pointer and integer [-Werror]
+  141 |       if(elemento == '(') push(Paux, elemento);
+      |                   ^~
+exercises.c:142:19: error: comparison between pointer and integer [-Werror]
+  142 |       if(elemento == '{') push(Paux, elemento);
+      |                   ^~
+exercises.c:143:19: error: comparison between pointer and integer [-Werror]
+  143 |       if(elemento == '[') push(Paux, elemento);
+      |                   ^~
+exercises.c:145:19: error: comparison between pointer and integer [-Werror]
+  145 |       if(elemento == ')') {
+      |                   ^~
+exercises.c:158:19: error: comparison between pointer and integer [-Werror]
+  158 |       if(elemento == '}') {
+      |                   ^~
+exercises.c:171:19: error: comparison between pointer and integer [-Werror]
+  171 |       if(elemento == ']') {
+      |                   ^~
+exercises.c:135:19: error: ‘elemento’ is used uninitialized [-Werror=uninitialized]
+  135 |    while(elemento != '\0') {
+      |          ~~~~~~~~~^~~~~~~
+exercises.c:132:10: note: ‘elemento’ was declared here
+  132 |    char *elemento;
+      |          ^~~~~~~~
+cc1: all warnings being treated as errors
+e81f990

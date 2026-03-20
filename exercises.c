@@ -129,15 +129,22 @@ paraéntesis balanceados. Retorna 1 si están balanceados,
 int parentesisBalanceados(char *cadena) {
    Stack *Paux = create_stack();
    int cont = 0;
-   char elemento = cadena[0];
+   char *elemento;
+   
+   
    while(elemento != '\0') {
-      if(elemento == '(') push(Paux, &elemento);
-      if(elemento == '{') push(Paux, &elemento);
-      if(elemento == '[') push(Paux, &elemento);
+      
+      elemento = (char*) malloc(1 * sizeof(char));
+      if(elemento == NULL) exit(EXIT_FAILURE);
+      *elemento = cadena[cont];
+      
+      if(elemento == '(') push(Paux, elemento);
+      if(elemento == '{') push(Paux, elemento);
+      if(elemento == '[') push(Paux, elemento);
 
       if(elemento == ')') {
          if(top(Paux) != NULL) {
-            if( *((char)top(Paux)) == '(') {
+            if( *((char*)top(Paux)) == '(') {
                pop(Paux);
             }
             else {
@@ -150,7 +157,7 @@ int parentesisBalanceados(char *cadena) {
       }
       if(elemento == '}') {
          if(top(Paux) != NULL) {
-            if( *((char)top(Paux)) == '(') {
+            if( *((char*)top(Paux)) == '(') {
                pop(Paux);
             }
             else {
@@ -163,7 +170,7 @@ int parentesisBalanceados(char *cadena) {
       }
       if(elemento == ']') {
          if(top(Paux) != NULL) {
-            if( *((char)top(Paux)) == '(') {
+            if( *((char*)top(Paux)) == '(') {
                pop(Paux);
             }
             else {
@@ -176,7 +183,6 @@ int parentesisBalanceados(char *cadena) {
       }
       
       cont++;
-      elemento = cadena[cont];
    }
 
    if(top(Paux) == NULL) return 1;
