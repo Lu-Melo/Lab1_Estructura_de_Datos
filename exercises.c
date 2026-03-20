@@ -44,7 +44,7 @@ Al finalizar retorna la lista creada.
 List* crea_lista() {
    List* L = create_list();
    
-   int* elemento;
+   int *elemento;
 
    for(int i = 1; i <= 10; i++) {
       elemento = (int*) malloc(1 * sizeof(int));
@@ -83,7 +83,7 @@ posiciona en el elemento anterior.
 */
 
 void eliminaElementos(List*L, int elem){
-   int* comparar = first(L);
+   int *comparar = first(L);
    
    while(comparar != NULL) {
       if(*comparar == elem) {
@@ -101,6 +101,22 @@ Puedes usar una pila auxiliar.
 */
 
 void copia_pila(Stack* P1, Stack* P2) {
+   Stack *Paux = create_stack();
+
+   void *elemento = top(P1);
+
+   while(elemento != NULL) {
+      push(Paux, elemento);
+      pop(P1);
+      elemento = top(P1);
+   }
+   elemento = top(Paux);
+   while(elemento != NULL) {
+      push(P1, elemento);
+      push(P2, elemento);
+      pop(Paux);
+      elemento = top(Paux);
+   }
 }
 
 /*
