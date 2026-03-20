@@ -21,3 +21,23 @@ exercises.c:60:17: error: assignment to ‘int’ from ‘void *’ makes intege
    60 |       *elemento = next(L);
       |                 ^
 9783d77
+Fri Mar 20 10:16:01 PM UTC 2026: 
+ exercises.c | 5 +++--
+ 1 file changed, 3 insertions(+), 2 deletions(-)
+Compilation failed
+In file included from test.c:5:
+exercises.c: In function ‘sumaLista’:
+exercises.c:57:4: error: invalid type argument of unary ‘*’ (have ‘int’)
+   57 |    *elemento = first(L);
+      |    ^~~~~~~~~
+exercises.c:59:19: error: comparison between pointer and integer [-Werror]
+   59 |    while(elemento != NULL) {
+      |                   ^~
+exercises.c:60:20: error: invalid type argument of unary ‘*’ (have ‘int’)
+   60 |       sumatoria += *elemento;
+      |                    ^~~~~~~~~
+exercises.c:61:16: error: assignment to ‘int’ from ‘void *’ makes integer from pointer without a cast [-Wint-conversion]
+   61 |       elemento = next(L);
+      |                ^
+cc1: all warnings being treated as errors
+1604b67
