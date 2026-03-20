@@ -469,3 +469,36 @@ exercises.c:160:25: error: expected ‘;’ before ‘}’ token
       |             ~            
 cc1: all warnings being treated as errors
 278f12a
+Fri Mar 20 12:50:11 AM UTC 2026: 
+ exercises.c | 21 +++++++++++----------
+ 1 file changed, 11 insertions(+), 10 deletions(-)
+Compilation failed
+In file included from test.c:5:
+exercises.c: In function ‘parentesisBalanceados’:
+exercises.c:135:25: error: expected ‘;’ before ‘}’ token
+  135 |                pop(Paux)
+      |                         ^
+      |                         ;
+  136 |             }
+      |             ~            
+exercises.c:145:35: error: comparison between pointer and integer [-Werror]
+  145 |          if( *((char*)top(Paux) ) != NULL){
+      |                                   ^~
+exercises.c:146:16: error: cast from pointer to integer of different size [-Werror=pointer-to-int-cast]
+  146 |             if((char)top(Paux) == '{') {
+      |                ^
+exercises.c:147:25: error: expected ‘;’ before ‘}’ token
+  147 |                pop(Paux)
+      |                         ^
+      |                         ;
+  148 |             }
+      |             ~            
+exercises.c:158:34: error: expected ‘)’ before ‘{’ token
+  158 |          if( *((char*)top(Paux) ){
+      |            ~                     ^
+      |                                  )
+exercises.c:168:7: error: expected expression before ‘}’ token
+  168 |       }
+      |       ^
+cc1: all warnings being treated as errors
+de816b3
